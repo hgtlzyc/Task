@@ -9,7 +9,6 @@ import UIKit
 
 class TaskListTableViewController: UITableViewController {
 
-    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,6 @@ class TaskListTableViewController: UITableViewController {
         return TaskController.shared.tasks.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? TaskTableViewCell else { return UITableViewCell()}
         
@@ -37,7 +35,6 @@ class TaskListTableViewController: UITableViewController {
 
         return cell
     }
-    
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true

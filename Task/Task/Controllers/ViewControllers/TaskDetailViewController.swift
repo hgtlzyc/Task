@@ -36,6 +36,12 @@ class TaskDetailViewController: UIViewController {
         
     }
     
+    // MARK: - dismiss the keyboard when tap outside the text view
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        taskNotesTextView.resignFirstResponder()
+        taskNameTextField.resignFirstResponder()
+    }
+    
     // MARK: - IB Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {

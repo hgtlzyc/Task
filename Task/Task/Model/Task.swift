@@ -9,7 +9,6 @@ import Foundation
 
 class Task: Codable {
     
-
     var name: String
     var notes: String?
     var dueDate: Date?

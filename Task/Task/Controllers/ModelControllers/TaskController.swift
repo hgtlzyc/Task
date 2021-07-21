@@ -35,7 +35,7 @@ class TaskController {
     }
     
     func delete(task: Task){
-        //it is holding class instance, can use ===
+        //it is holding class instance, can use === check for identity
         let indexToDelete = tasks.firstIndex{ $0 === task }
         guard let index = indexToDelete else { return }
         tasks.remove(at: index)
