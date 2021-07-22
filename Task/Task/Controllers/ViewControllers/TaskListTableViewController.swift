@@ -72,6 +72,7 @@ extension TaskListTableViewController: TaskCompletionDelegate {
     func taskCellButtonTapped(_ sender: TaskTableViewCell) {
         sender.task?.isComplete.toggle()
         sender.updateViews()
+        TaskController.shared.saveToPersistanceStore()
     }
 
 }
